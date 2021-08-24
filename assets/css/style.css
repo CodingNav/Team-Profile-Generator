@@ -1,0 +1,28 @@
+.jumbotron {
+    background-color: #ececec !important;
+}
+
+.fa, .fas {
+    font-size: 35px;
+}
+
+/* MANAGER CARD */
+.manager-card {
+    padding: 10px;
+    border: 1px solid #7a66004d;
+}
+
+.manager-card .card-header {
+    background-color: #F3D250 !important;
+    color: #776617;
+}
+
+.manager-card .card-body {
+    background-color: #fffae2;
+    color: #776617;
+}
+
+.manager-card .list-group-item {
+    background-color: #fffae2;
+}
+
