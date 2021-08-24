@@ -1,7 +1,10 @@
 .jumbotron {
+    background-color: #ececec !important;
+}
+
+.jumbotron h1 {
     font-size: 60px;
     color: #a09f9f;
-    background-color: #ececec !important;
 }
 
 .fa, .fas {
