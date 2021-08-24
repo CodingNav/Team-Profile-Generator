@@ -113,7 +113,7 @@ inquirer
         {
             type: "input",
             name: "managerEmail",
-            message: "What is the team manager's email address?",
+            message: "What is the team manager's email?",
         },
         {
             type: "input",
@@ -123,4 +123,33 @@ inquirer
     ])
     .then((answers) => {
         const managerContent = generateManager(answers);
-    })
+    });
+
+    inquirer
+    .prompt([
+        {
+            type: "input",
+            name: "engineerName",
+            message: "What is the engineer's name?"
+        },
+        {
+            type: "input",
+            name: "engineerID",
+            message: "What is the engineer's ID?"
+        },
+        {
+            type: "input",
+            name: "engineerEmail",
+            message: "What is the engineer's email?"
+        },
+        {
+            type: "input",
+            name: "engineerGithub",
+            message: "What is the engineer's Github username?"
+        }
+    ])
+    .then((answers) => {
+        const engineerContent = generateEngineer(answers);
+    });
+
+    
