@@ -18,7 +18,7 @@
 
 /* MANAGER CARD */
 .manager-card {
-    border: 1px solid #7a66004d;
+    border: 1px solid #7a660040 !important;
 }
 
 .manager-card .card-header {
@@ -37,7 +37,7 @@
 
 /* ENGINEER CARD */
 .engineer-card {
-    border: 1px solid #3f688175;
+    border: 1px solid #3f688145 !important;
 }
 
 .engineer-card .card-header {
@@ -55,7 +55,7 @@
 }
 /* INTERN CARD */
 .intern-card {
-    border: 1px solid #3f688175;
+    border: 1px solid #8f4b4b47 !important;
 }
 
 .intern-card .card-header {
