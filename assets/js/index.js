@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+// generates manager card
 const generateManager = (answers) =>
     `
     <!-- MANAGER CARD -->
@@ -20,7 +21,7 @@ const generateManager = (answers) =>
     </div>
 `;
 
-
+// generates engineer card
 const generateEngineer = (answers) =>
     `
     <!-- ENGINEER CARD -->
@@ -40,6 +41,7 @@ const generateEngineer = (answers) =>
     </div>
 `;
 
+// generates intern card
 const generateIntern = (answers) =>
     `
     <!-- INTERN CARD -->
@@ -59,39 +61,66 @@ const generateIntern = (answers) =>
     </div>
 `;
 
+// generates the html page
 const generateHTML = (answers) =>
     `
     <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-</head>
-
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 jumbotron mb-3">
-                <h1 class="text-center">My Team</h1>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 jumbotron mb-3">
+                    <h1 class="text-center">My Team</h1>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-             <!-- CARDS GO HERE -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                <!-- CARDS GO HERE -->
+                </div>
             </div>
         </div>
-    </div>
-    <script src="assets/js/index.js"></script>
-</body>
-</html>
+        <script src="assets/js/index.js"></script>
+    </body>
+    </html>
 `;
+
+inquirer
+    .prompt([
+        {
+            type: "input",
+            name: "managerName",
+            message: "What is the team manager's name?",
+        },
+        {
+            type: "input",
+            name: "managerID",
+            message: "What is the team manager's ID?",
+        },
+        {
+            type: "input",
+            name: "managerEmail",
+            message: "What is the team manager's email address?",
+        },
+        {
+            type: "input",
+            name: "managerOfficeNum",
+            message: "What is the team manager's office number?",
+        }
+    ])
+    .then((answers) => {
+        const managerContent = generateManager(answers);
+    })
