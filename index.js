@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // generates manager card
-const generateManager = (answers) =>
+const generateManager = (answers) => 
     `
     <!-- MANAGER CARD -->
     <div class="card manager-card">
@@ -98,6 +98,7 @@ const generateHTML = (answers) =>
     </html>
 `;
 
+// inquirer prompt for manager
 inquirer
     .prompt([
         {
@@ -125,6 +126,7 @@ inquirer
         const managerContent = generateManager(answers);
     });
 
+    // inquirer prompt for engineer
     inquirer
     .prompt([
         {
@@ -152,6 +154,7 @@ inquirer
         const engineerContent = generateEngineer(answers);
     });
 
+    // inquirer prompt for intern
     inquirer
     .prompt([
         {
