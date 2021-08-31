@@ -9,15 +9,15 @@ const generateManager = (answers) =>
     <!-- MANAGER CARD -->
     <div class="card manager-card">
         <div class="card-header text-center">
-            <h2>Name</h2>
+            <h2>${answers.managerName}</h2>
             <h3>Manager</h3>
             <i class="fas fa-mug-hot"></i>
         </div>
         <div class="card-body">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: 1234</li>
-                <li class="list-group-item">Email: test@test.com</li>
-                <li class="list-group-item">Office Number: 128</li>
+                <li class="list-group-item">ID: ${answers.managerID}</li>
+                <li class="list-group-item">Email: ${answers.managerEmail}</li>
+                <li class="list-group-item">Office Number: ${answers.managerOfficeNum}</li>
             </ul>
         </div>
     </div>
