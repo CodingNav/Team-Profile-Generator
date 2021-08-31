@@ -29,15 +29,15 @@ const generateEngineer = (answers) =>
     <!-- ENGINEER CARD -->
     <div class="card engineer-card">
         <div class="card-header text-center">
-            <h2>Name</h2>
+            <h2>${answers.engineerName}</h2>
             <h3>Engineer</h3>
             <i class="fas fa-glasses"></i>
         </div>
         <div class="card-body">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: 1234</li>
-                <li class="list-group-item">Email: test@test.com</li>
-                <li class="list-group-item">Github: username</li>
+                <li class="list-group-item">ID: ${answers.engineerID}</li>
+                <li class="list-group-item">Email: ${answers.engineerEmail}</li>
+                <li class="list-group-item">Github: ${answers.engineerGithub}</li>
             </ul>
         </div>
     </div>
@@ -49,15 +49,15 @@ const generateIntern = (answers) =>
     <!-- INTERN CARD -->
     <div class="card intern-card">
         <div class="card-header text-center">
-            <h2>Name</h2>
+            <h2>${answers.internName}</h2>
             <h3>Intern</h3>
             <i class="fas fa-user-graduate"></i>
         </div>
         <div class="card-body">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: 1234</li>
-                <li class="list-group-item">Email: test@test.com</li>
-                <li class="list-group-item">School: University</li>
+                <li class="list-group-item">ID: ${answers.internID}</li>
+                <li class="list-group-item">Email: ${answers.internEmail}</li>
+                <li class="list-group-item">School: ${answers.internSchool}</li>
             </ul>
         </div>
     </div>
