@@ -184,6 +184,7 @@ inquirer
     ])
     .then((answers) => {
         const engineerContent = generateEngineer(answers);
+        teamMembers.push(engineerContent);
     });
 }
 
@@ -215,6 +216,7 @@ inquirer
     ])
     .then((answers) => {
         const internContent = generateIntern(answers);
+        teamMembers.push(internContent);
     });  
 }
 
