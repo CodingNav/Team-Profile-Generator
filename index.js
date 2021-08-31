@@ -1,6 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+const teamMembers = [];
+
 // generates manager card
 const generateManager = (answers) => 
     `
@@ -125,6 +127,7 @@ inquirer
     ])
     .then((answers) => {
         const managerContent = generateManager(answers);
+        teamMembers.push(managerContent);
         buildTeam();
     });
 }
