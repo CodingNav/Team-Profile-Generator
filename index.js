@@ -4,7 +4,7 @@ const fs = require('fs');
 const teamMembers = [];
 
 // generates manager card
-const generateManager = (answers) => 
+const generateManager = (answers) =>
     `
     <!-- MANAGER CARD -->
     <div class="card manager-card">
@@ -64,7 +64,7 @@ const generateIntern = (answers) =>
 `;
 
 // generates the html page
-const generateHTML = (answers) =>
+const generateHTML = () =>
     `
     <!DOCTYPE html>
     <html lang="en">
@@ -120,106 +120,110 @@ const buildTeam = () => {
                 internPrompt();
             }
             else {
+                const teamMembersHTML = generateHTML();
+                fs.writeFile('index.html', teamMembersHTML, (err) =>
+                    err ? console.log(err) : console.log('\x1b[32m%s\x1b[0m', 'Successfully created team members HTML!')
+                );
                 return;
             }
         })
-    }
+}
 
 // function with inquirer prompt for manager
 const managerPrompt = () => {
-inquirer
-    .prompt([
-        {
-            type: "input",
-            name: "managerName",
-            message: "What is the team manager's name?",
-        },
-        {
-            type: "input",
-            name: "managerID",
-            message: "What is the team manager's ID?",
-        },
-        {
-            type: "input",
-            name: "managerEmail",
-            message: "What is the team manager's email?",
-        },
-        {
-            type: "input",
-            name: "managerOfficeNum",
-            message: "What is the team manager's office number?",
-        }
-    ])
-    .then((answers) => {
-        const managerContent = generateManager(answers);
-        teamMembers.push(managerContent);
-        buildTeam();
-    });
+    inquirer
+        .prompt([
+            {
+                type: "input",
+                name: "managerName",
+                message: "What is the team manager's name?",
+            },
+            {
+                type: "input",
+                name: "managerID",
+                message: "What is the team manager's ID?",
+            },
+            {
+                type: "input",
+                name: "managerEmail",
+                message: "What is the team manager's email?",
+            },
+            {
+                type: "input",
+                name: "managerOfficeNum",
+                message: "What is the team manager's office number?",
+            }
+        ])
+        .then((answers) => {
+            const managerContent = generateManager(answers);
+            teamMembers.push(managerContent);
+            buildTeam();
+        });
 }
 
 // function with inquirer prompt for engineer
 const engineerPrompt = () => {
-inquirer
-    .prompt([
-        {
-            type: "input",
-            name: "engineerName",
-            message: "What is the engineer's name?"
-        },
-        {
-            type: "input",
-            name: "engineerID",
-            message: "What is the engineer's ID?"
-        },
-        {
-            type: "input",
-            name: "engineerEmail",
-            message: "What is the engineer's email?"
-        },
-        {
-            type: "input",
-            name: "engineerGithub",
-            message: "What is the engineer's Github username?"
-        }
-    ])
-    .then((answers) => {
-        const engineerContent = generateEngineer(answers);
-        teamMembers.push(engineerContent);
-        buildTeam();
-    });
+    inquirer
+        .prompt([
+            {
+                type: "input",
+                name: "engineerName",
+                message: "What is the engineer's name?"
+            },
+            {
+                type: "input",
+                name: "engineerID",
+                message: "What is the engineer's ID?"
+            },
+            {
+                type: "input",
+                name: "engineerEmail",
+                message: "What is the engineer's email?"
+            },
+            {
+                type: "input",
+                name: "engineerGithub",
+                message: "What is the engineer's Github username?"
+            }
+        ])
+        .then((answers) => {
+            const engineerContent = generateEngineer(answers);
+            teamMembers.push(engineerContent);
+            buildTeam();
+        });
 }
 
 
 // function with inquirer prompt for intern
 const internPrompt = () => {
-inquirer
-    .prompt([
-        {
-            type: "input",
-            name: "internName",
-            message: "What is the intern's name?"
-        },
-        {
-            type: "input",
-            name: "internID",
-            message: "What is the intern's ID?"
-        },
-        {
-            type: "input",
-            name: "internEmail",
-            message: "What is the intern's email?"
-        },
-        {
-            type: "input",
-            name: "internSchool",
-            message: "What is the intern's school name?"
-        }
-    ])
-    .then((answers) => {
-        const internContent = generateIntern(answers);
-        teamMembers.push(internContent);
-        buildTeam();
-    });  
+    inquirer
+        .prompt([
+            {
+                type: "input",
+                name: "internName",
+                message: "What is the intern's name?"
+            },
+            {
+                type: "input",
+                name: "internID",
+                message: "What is the intern's ID?"
+            },
+            {
+                type: "input",
+                name: "internEmail",
+                message: "What is the intern's email?"
+            },
+            {
+                type: "input",
+                name: "internSchool",
+                message: "What is the intern's school name?"
+            }
+        ])
+        .then((answers) => {
+            const internContent = generateIntern(answers);
+            teamMembers.push(internContent);
+            buildTeam();
+        });
 }
 
 managerPrompt();
