@@ -92,6 +92,7 @@ const generateHTML = (answers) =>
             <div class="row">
                 <div class="col-12 d-flex justify-content-center">
                 <!-- CARDS GO HERE -->
+                ${teamMembers.join("")}
                 </div>
             </div>
         </div>
