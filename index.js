@@ -101,6 +101,30 @@ const generateHTML = (answers) =>
     </html>
 `;
 
+// function with inquirer prompt to ask if user wants more members
+const buildTeam = () => {
+    inquirer
+        .prompt([
+            {
+                type: "list",
+                name: "employeeType",
+                message: "Which type of team member would you like to add?",
+                choices: ["engineer", "intern", "I don't want anymore team members"]
+            }
+        ])
+        .then((answer) => {
+            if (answer.employeeType == "engineer") {
+                engineerPrompt();
+            }
+            else if (answer.employeeType == "intern") {
+                internPrompt();
+            }
+            else {
+                return;
+            }
+        })
+    }
+
 // function with inquirer prompt for manager
 const managerPrompt = () => {
 inquirer
@@ -133,30 +157,6 @@ inquirer
     });
 }
 
-// function with inquirer prompt to ask if user wants more members
-const buildTeam = () => {
-inquirer
-    .prompt([
-        {
-            type: "list",
-            name: "employeeType",
-            message: "Which type of team member would you like to add?",
-            choices: ["engineer", "intern", "I don't want anymore team members"]
-        }
-    ])
-    .then((answer) => {
-        if (answer.employeeType == "engineer") {
-            engineerPrompt();
-        }
-        else if (answer.employeeType == "intern") {
-            internPrompt();
-        }
-        else {
-            return;
-        }
-    })
-}
-
 // function with inquirer prompt for engineer
 const engineerPrompt = () => {
 inquirer
@@ -185,6 +185,7 @@ inquirer
     .then((answers) => {
         const engineerContent = generateEngineer(answers);
         teamMembers.push(engineerContent);
+        buildTeam();
     });
 }
 
@@ -217,8 +218,8 @@ inquirer
     .then((answers) => {
         const internContent = generateIntern(answers);
         teamMembers.push(internContent);
+        buildTeam();
     });  
 }
 
-
-    
+managerPrompt();
