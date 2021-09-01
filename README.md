@@ -16,6 +16,8 @@
 ## Preview
 <img src="./dist/assets/images/screenshot.png" alt="Web Page" width="100%">
 
+https://user-images.githubusercontent.com/58195156/131735740-059b0ba2-3128-41b8-96fd-d1abfaa71304.mov
+
 ## Installation
 * Clone the GitHub repository onto your desktop
 * Open up the "Team-Profile-Generator" file in a command terminal.
