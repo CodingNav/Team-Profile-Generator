@@ -3,7 +3,7 @@
 const generateManager = (manager) =>
     `
     <!-- MANAGER CARD -->
-    <div class="col-3">
+    <div class="col-sm-6 col-md-5 col-lg-4">
         <div class="card manager-card">
             <div class="card-header text-center">
                 <h2>${manager.name}</h2>
@@ -25,7 +25,7 @@ const generateManager = (manager) =>
 const generateEngineer = (answers) =>
     `
     <!-- ENGINEER CARD -->
-    <div class="col-3">
+    <div class="col-sm-6 col-md-5 col-lg-4">
         <div class="card engineer-card">
             <div class="card-header text-center">
                 <h2>${answers.engineerName}</h2>
@@ -47,7 +47,7 @@ const generateEngineer = (answers) =>
 const generateIntern = (answers) =>
     `
     <!-- INTERN CARD -->
-    <div class="col-3">
+    <div class="col-sm-6 col-md-5 col-lg-4">
         <div class="card intern-card">
             <div class="card-header text-center">
                 <h2>${answers.internName}</h2>
