@@ -6,8 +6,6 @@
 
 ## Preview
 <img src="./dist/assets/images/screenshot.png" alt="Web Page" width="100%">
-<img src="./dist/assets/images/terminal.png" alt="Terminal" width="100%">
-<img src="./dist/assets/images/test.png" alt="Test" width="100%">
 
 ## Installation
 * Clone the GitHub repository onto your desktop
@@ -22,12 +20,16 @@ npm install
 ```
 npm test
 ```
+* If all the tests pass, the terminal will show the following:
+<img src="./dist/assets/images/test.png" alt="Test" width="100%">
 
 ## Usage
 * Use "node index.js" to run the application. Answer the questions as asked and the HTML will be generated.
 ```
 node index.js
 ```
+* The following is an example of the CLI being ran:
+<img src="./dist/assets/images/terminal.png" alt="Terminal" width="100%">
 
 ## Technologies
 <img align="middle" src="./dist/assets/images/html_css.png" alt="HTML5 and CSS" width="25%"/>&nbsp; &nbsp;
