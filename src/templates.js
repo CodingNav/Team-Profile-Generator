@@ -12,7 +12,7 @@ const generateManager = (manager) =>
         <div class="card-body">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${manager.id}</li>
-                <li class="list-group-item">Email: ${manager.email}</li>
+                <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
                 <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
             </ul>
         </div>
@@ -32,8 +32,8 @@ const generateEngineer = (answers) =>
         <div class="card-body">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${answers.engineerID}</li>
-                <li class="list-group-item">Email: ${answers.engineerEmail}</li>
-                <li class="list-group-item">Github: ${answers.engineerGithub}</li>
+                <li class="list-group-item">Email: <a href="mailto:${answers.engineerEmail}">${answers.engineerEmail}</a></li>
+                <li class="list-group-item">Github: <a href="https://github.com/${answers.engineerGithub}">${answers.engineerGithub}</a></li>
             </ul>
         </div>
     </div>
@@ -52,7 +52,7 @@ const generateIntern = (answers) =>
         <div class="card-body">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${answers.internID}</li>
-                <li class="list-group-item">Email: ${answers.internEmail}</li>
+                <li class="list-group-item">Email: <a href="mailto:${answers.internEmail}">${answers.internEmail}</a></li>
                 <li class="list-group-item">School: ${answers.internSchool}</li>
             </ul>
         </div>
