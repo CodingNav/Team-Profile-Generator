@@ -1,0 +1,73 @@
+.jumbotron {
+    background-color: #ececec !important;
+}
+
+.jumbotron h1 {
+    font-size: 60px;
+    color: #a09f9f;
+}
+
+.fa, .fas {
+    font-size: 35px;
+}
+
+.card {
+    margin: 10px;
+    padding: 10px;
+}
+
+/* MANAGER CARD */
+.manager-card {
+    border: 1px solid #7a660040 !important;
+}
+
+.manager-card .card-header {
+    color: #776617;
+    background-color: #F3D250 !important;
+}
+
+.manager-card .card-body {
+    color: #776617;
+    background-color: #fffae2;
+}
+
+.manager-card .list-group-item {
+    background-color: #fffae2;
+}
+
+/* ENGINEER CARD */
+.engineer-card {
+    border: 1px solid #3f688145 !important;
+}
+
+.engineer-card .card-header {
+    color: #3e6279;
+    background-color: #90ccf4 !important;
+}
+
+.engineer-card .card-body {
+    color: #3e6279;
+    background-color: #e4f1fa;
+}
+
+.engineer-card .list-group-item {
+    background-color: #e4f1fa;
+}
+/* INTERN CARD */
+.intern-card {
+    border: 1px solid #8f4b4b47 !important;
+}
+
+.intern-card .card-header {
+    color: #8f4b4b;
+    background-color: #f78888 !important;
+}
+
+.intern-card .card-body {
+    color: #8f4b4b;
+    background-color: #ffd3d3;
+}
+
+.intern-card .list-group-item {
+    background-color: #ffd3d3;
+}
