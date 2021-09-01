@@ -5,16 +5,31 @@
 
 
 ## Preview
-
 <img src="./dist/assets/images/screenshot.png" alt="Web Page" width="100%">
-<img src="./dist/assets/images/terminal.png" alt="Terminal" width="49%">
-<img src="./dist/assets/images/test.png" alt="Test" width="49%">
+<img src="./dist/assets/images/terminal.png" alt="Terminal" width="100%">
+<img src="./dist/assets/images/test.png" alt="Test" width="100%">
 
+## Installation
+* Clone the GitHub repository onto your desktop
+* Open up the "Team-Profile-Generator" file in a command terminal.
+* Use "npm install" to install all required dependencies for the app.
+```
+npm install
+```
 
+## Test
+* Use "npm test" to test the application to make sure it works properly.
+```
+npm test
+```
 
+## Usage
+* Use "node index.js" to run the application. Answer the questions as asked and the HTML will be generated.
+```
+node index.js
+```
 
 ## Technologies
-
 <img align="middle" src="./dist/assets/images/html_css.png" alt="HTML5 and CSS" width="25%"/>&nbsp; &nbsp;
 <img align="middle" src="./dist/assets/images/bootstrap.png" alt="Bootstrap" width="12%"/>&nbsp; &nbsp; &nbsp; 
 <img align="middle" src="./dist/assets/images/js.jpg" alt="Javascript" width="10%"/>&nbsp; &nbsp; &nbsp; 
