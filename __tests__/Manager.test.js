@@ -22,7 +22,7 @@ describe("Manager", () => {
             expect(email).toEqual("bob@test.com");
         });
     });
-    describe("getofficeNumber", () => {
+    describe("getOfficeNumber", () => {
         it("should get the manager's office number", () => {
             const officeNum = manager.officeNumber;
             expect(officeNum).toEqual(1);
