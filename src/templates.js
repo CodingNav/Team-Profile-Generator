@@ -3,18 +3,20 @@
 const generateManager = (manager) =>
     `
     <!-- MANAGER CARD -->
-    <div class="card manager-card">
-        <div class="card-header text-center">
-            <h2>${manager.name}</h2>
-            <h3>Manager</h3>
-            <i class="fas fa-mug-hot"></i>
-        </div>
-        <div class="card-body">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${manager.id}</li>
-                <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
-                <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
-            </ul>
+    <div class="col-3">
+        <div class="card manager-card">
+            <div class="card-header text-center">
+                <h2>${manager.name}</h2>
+                <h3>Manager</h3>
+                <i class="fas fa-mug-hot"></i>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: ${manager.id}</li>
+                    <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
+                    <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
+                </ul>
+            </div>
         </div>
     </div>
 `;
@@ -23,18 +25,20 @@ const generateManager = (manager) =>
 const generateEngineer = (answers) =>
     `
     <!-- ENGINEER CARD -->
-    <div class="card engineer-card">
-        <div class="card-header text-center">
-            <h2>${answers.engineerName}</h2>
-            <h3>Engineer</h3>
-            <i class="fas fa-glasses"></i>
-        </div>
-        <div class="card-body">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${answers.engineerID}</li>
-                <li class="list-group-item">Email: <a href="mailto:${answers.engineerEmail}">${answers.engineerEmail}</a></li>
-                <li class="list-group-item">Github: <a href="https://github.com/${answers.engineerGithub}">${answers.engineerGithub}</a></li>
-            </ul>
+    <div class="col-3">
+        <div class="card engineer-card">
+            <div class="card-header text-center">
+                <h2>${answers.engineerName}</h2>
+                <h3>Engineer</h3>
+                <i class="fas fa-glasses"></i>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: ${answers.engineerID}</li>
+                    <li class="list-group-item">Email: <a href="mailto:${answers.engineerEmail}">${answers.engineerEmail}</a></li>
+                    <li class="list-group-item">Github: <a href="https://github.com/${answers.engineerGithub}" target="_blank">${answers.engineerGithub}</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 `;
@@ -43,18 +47,20 @@ const generateEngineer = (answers) =>
 const generateIntern = (answers) =>
     `
     <!-- INTERN CARD -->
-    <div class="card intern-card">
-        <div class="card-header text-center">
-            <h2>${answers.internName}</h2>
-            <h3>Intern</h3>
-            <i class="fas fa-user-graduate"></i>
-        </div>
-        <div class="card-body">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${answers.internID}</li>
-                <li class="list-group-item">Email: <a href="mailto:${answers.internEmail}">${answers.internEmail}</a></li>
-                <li class="list-group-item">School: ${answers.internSchool}</li>
-            </ul>
+    <div class="col-3">
+        <div class="card intern-card">
+            <div class="card-header text-center">
+                <h2>${answers.internName}</h2>
+                <h3>Intern</h3>
+                <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: ${answers.internID}</li>
+                    <li class="list-group-item">Email: <a href="mailto:${answers.internEmail}">${answers.internEmail}</a></li>
+                    <li class="list-group-item">School: ${answers.internSchool}</li>
+                </ul>
+            </div>
         </div>
     </div>
 `;
@@ -85,11 +91,9 @@ const generateHTML = (teamMembers) =>
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-12 d-flex justify-content-center">
+            <div class="row flex-wrap justify-content-center"> 
                 <!-- CARDS GO HERE -->
                 ${teamMembers.join("")}
-                </div>
             </div>
         </div>
         <script src="assets/js/index.js"></script>
