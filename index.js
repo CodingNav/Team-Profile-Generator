@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { generateManager, generateEngineer, generateIntern, generateHTML } = require('./src/templates');
+const Manager = require('./lib/Manager');
 
 const teamMembers = [];
 
@@ -58,7 +59,8 @@ const managerPrompt = () => {
             }
         ])
         .then((answers) => {
-            const managerContent = generateManager(answers);
+            const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOfficeNum);
+            const managerContent = generateManager(manager);
             teamMembers.push(managerContent);
             buildTeam();
         });

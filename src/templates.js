@@ -1,19 +1,19 @@
 
 // generates manager card
-const generateManager = (answers) =>
+const generateManager = (manager) =>
     `
     <!-- MANAGER CARD -->
     <div class="card manager-card">
         <div class="card-header text-center">
-            <h2>${answers.managerName}</h2>
+            <h2>${manager.name}</h2>
             <h3>Manager</h3>
             <i class="fas fa-mug-hot"></i>
         </div>
         <div class="card-body">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${answers.managerID}</li>
-                <li class="list-group-item">Email: ${answers.managerEmail}</li>
-                <li class="list-group-item">Office Number: ${answers.managerOfficeNum}</li>
+                <li class="list-group-item">ID: ${manager.id}</li>
+                <li class="list-group-item">Email: ${manager.email}</li>
+                <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
             </ul>
         </div>
     </div>
